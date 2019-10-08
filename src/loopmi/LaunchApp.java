@@ -38,17 +38,17 @@ public void invaidLogin() throws InterruptedException {
 	email.sendKeys("ghensky.oje@gmail.com");
 	
 	WebElement passwordField = driver.findElement(By.xpath("//android.widget.EditText[@text='Password']"));
-	passwordField.sendKeys("password");
+	passwordField.sendKeys("password1");
 	
 	WebElement loginBtn = driver.findElement(By.xpath("//android.widget.Button[@text='LOGIN']"));
 	loginBtn.click();
 	Thread.sleep(4000);
-	//WebElement okBtn = driver.findElement(By.xpath("//android.widget.Button[@text='OK']"));
-	//okBtn.click();
+	WebElement okBtn = driver.findElement(By.xpath("//android.widget.Button[@text='OK']"));
+	okBtn.click();
 	
 	System.out.println("Invalid login executed successfully");
 }
-/*@Test
+@Test
 public void validLogin() throws InterruptedException {
 
 	WebElement emailField =  driver.findElement(By.xpath("//android.widget.EditText[@text='Email Address']"));
@@ -66,7 +66,7 @@ public void validLogin() throws InterruptedException {
 	
 	System.out.println("valid login executed successfully");
 	
-}*/
+}
 @AfterTest
 public void closeApp() {
 	driver.quit();
