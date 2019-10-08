@@ -34,8 +34,8 @@ public void setUp() throws Exception {
 	
 @Test
 public void invaidLogin() throws InterruptedException {
-	WebElement emailField = driver.findElement(By.xpath("//android.widget.EditText[@text='Email Address']"));
-	emailField.sendKeys("ghensky.oje@gmail.com");
+	WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text='Email Address']"));
+	email.sendKeys("ghensky.oje@gmail.com");
 	
 	WebElement passwordField = driver.findElement(By.xpath("//android.widget.EditText[@text='Password']"));
 	passwordField.sendKeys("password");
