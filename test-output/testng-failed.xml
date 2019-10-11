@@ -6,7 +6,7 @@
       <class name="loopmi.LaunchApp">
         <methods>
           <include name="invaidLogin"/>
-          <include name="closeApp"/>
+          <include name="validLogin"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- loopmi.LaunchApp -->

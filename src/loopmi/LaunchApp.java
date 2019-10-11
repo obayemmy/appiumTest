@@ -36,27 +36,24 @@ public void setUp() throws Exception {
 public void invaidLogin() throws InterruptedException {
 	WebElement email = driver.findElement(By.xpath("//android.widget.EditText[@text='Email Address']"));
 	email.sendKeys("ghensky.oje@gmail.com");
-	
 	WebElement passwordField = driver.findElement(By.xpath("//android.widget.EditText[@text='Password']"));
 	passwordField.sendKeys("password1");
-	
 	WebElement loginBtn = driver.findElement(By.xpath("//android.widget.Button[@text='LOGIN']"));
 	loginBtn.click();
 	Thread.sleep(4000);
 	WebElement okBtn = driver.findElement(By.xpath("//android.widget.Button[@text='OK']"));
 	okBtn.click();
-	
 	System.out.println("Invalid login executed successfully");
 }
 @Test
 public void validLogin() throws InterruptedException {
-
-	WebElement emailField =  driver.findElement(By.xpath("//android.widget.EditText[@text='Email Address']"));
-	emailField.click();
+	WebElement emailField =  driver.findElement(By.xpath("//android.widget.EditText[@text='ghensky.oje@gmail.com']"));
+	emailField.sendKeys(Keys.ENTER);
 	emailField.clear();
 	emailField.sendKeys("ghensky.oje@gmail.com");
 	
-	WebElement passwordField = driver.findElement(By.xpath("//android.widget.EditText[@text='Password']"));
+	WebElement passwordField = driver.findElement(By.xpath("//android.widget.EditText[@text='••••••••']"));
+	passwordField.sendKeys(Keys.ENTER);
 	passwordField.clear();
 	passwordField.sendKeys("password");
 	
