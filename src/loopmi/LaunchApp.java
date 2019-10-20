@@ -20,13 +20,13 @@ WebDriver driver;
 @BeforeTest
 public void setUp() throws Exception {
 	DesiredCapabilities cap = new DesiredCapabilities();
-	cap.setCapability("deviceName", "Galaxy J7 Pro");
-	cap.setCapability("udid", "5200bc4ffe0b5453");
+	cap.setCapability("deviceName", "Galaxy A10)");
+	cap.setCapability("udid", "RF8M33Q2CTE");
 	cap.setCapability("platformName", "Android");
-	cap.setCapability("platformVersion", "8.1.0");
+	cap.setCapability("platformVersion", "9");
 	
 	cap.setCapability("appPackage", "org.antwire.loopmi");
-	cap.setCapability("appActivity", "com.tns.NativeScriptActivity");
+	cap.setCapability("appActivity", "org.loopmi.MainActivity");
 	//URl url = new URL("");
 	driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
